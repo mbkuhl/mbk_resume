@@ -7,19 +7,65 @@ body {
   background: #eeeeee;
 }
 
-.content {
+.title {
   max-width: 500px;
   margin: auto;
-  background: white;
+  background: #eeeeee;
   padding: 10px;
+
+}
+.portrait {
+  align: center;
+  border-radius: 50%;
+  padding: 0px;
+  box-shadow: 10px 10px 10px #777777;
+}
+
+.grid-container {
+  position: relative;
+  align: center;
+  vertical-align: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #eeeeee;
+  padding: 1px;
+
+}
+
+.grid-portrait {
+  background-color: #0000ee;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 1%;
+  margin: 5%;
+  text-align: center;
+}
+
+.grid-title {
+  background-color: #00eeee;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 1%;
+  font-size: 30px;
+  text-align: center;
 }
 </style>
 </head>
 <body>
 
-<div class="content">
-<h1>Software Engineer</h1>
+<div class="grid-container" >
+  <div class="grid-portrait" >
+    <img class = "portrait" src="<%= asset_path('Portrait.jpeg') %>" alt="Portrait" height=40% >
+  </div>
+
+  <div class="grid-title">
+    <div class="title">
+      <h1>Software Engineer</h1>
+    </div>
+  </div>
 </div>
+
+
 
 </body>
 </html>

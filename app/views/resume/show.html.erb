@@ -2,9 +2,24 @@
 <html>
 <head>
 <style>
-.grid-container {
+.grid-container-page {
   display: grid;
-  grid-template-columns: 90%;
+  grid-template-columns: 15% 85%;
+  background-color: #123456;
+  padding: 10px;
+}
+
+.grid-skills {
+  background-color: #654321;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 2px;
+  font-size: 8px;
+  text-align: center;
+}
+
+.grid-container-timeline {
+  display: grid;
+  grid-template-columns: 100%;
   background-color: #2196F3;
   padding: 10px;
 }
@@ -19,9 +34,11 @@
 .grid-title-left {
   background-color: rgba(255, 255, 0, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  font-family: Georgia, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .grid-title-right {
@@ -46,34 +63,44 @@
 <h1>display: grid</h1>
 
 <p>Use display: grid; to make a block-level grid container:</p>
+<div class="grid-container-page">
+  <div class="grid-container-skills"> </div>
+  <div class="grid-container-timeline">
+    <div class="grid-container-title">
+      <div class="grid-title-left">
+      <p>Technical Service Engineer</p>
+      <p style="font-weight:normal; font-family: Arial, Helvetica, sans-serif; font-size:15px">
+      <i>Haldor Topsoe, Inc.</i></p>
+      </div>
+      <div class="grid-title-right">
+      period1</div>
+    </div>
+    <div class="grid-content">Tasks 1</div>
+    <div class="grid-content">Tasks 2</div>
+    <div class="grid-content">Tasks 3</div>
+    <div class="grid-container-title">
+      <div class="grid-title-left">
+      <p>Research and Technology Engineer</p>
+      <p style="font-weight:normal; font-family: Georgia, Helvetica, sans-serif; font-size:15px">
+      <i>Albemarle Corporation</i></p>
+      </div>
+      <div class="grid-title-right">period2</div>
+    </div>
+    <div class="grid-content">Tasks 1</div>
+    <div class="grid-content">Tasks 2</div>
+    <div class="grid-content">Tasks 3</div>
+    <div class="grid-container-title">
+      <div class="grid-title-left">Company3</div>
+      <div class="grid-title-right">period3</div>
+    </div>
+    <div class="grid-content">Tasks 1</div>
+    <div class="grid-content">Tasks 2</div>
+    <div class="grid-content">Tasks 3</div>
 
-<div class="grid-container">
-  <div class="grid-container-title">
-    <div class="grid-title-left">Company1</div>
-    <div class="grid-title-right">period1</div>
+
+
   </div>
-  <div class="grid-content">Tasks 1</div>
-  <div class="grid-content">Tasks 2</div>
-  <div class="grid-content">Tasks 3</div>
-  <div class="grid-container-title">
-    <div class="grid-title-left">Company2</div>
-    <div class="grid-title-right">period2</div>
-  </div>
-  <div class="grid-content">Tasks 1</div>
-  <div class="grid-content">Tasks 2</div>
-  <div class="grid-content">Tasks 3</div>
-  <div class="grid-container-title">
-    <div class="grid-title-left">Company3</div>
-    <div class="grid-title-right">period3</div>
-  </div>
-  <div class="grid-content">Tasks 1</div>
-  <div class="grid-content">Tasks 2</div>
-  <div class="grid-content">Tasks 3</div>
-
-
-
 </div>
-
 </body>
 </html>
 

@@ -2,39 +2,54 @@
 <html>
 <head>
 <style>
+.header {
+  background-color: #abcdef;
+  padding: 10px 20px 20px 40px ;
+}
+
 .grid-container-page {
   display: grid;
   grid-template-columns: 15% 85%;
-  background-color: #123456;
-  padding: 10px;
+  background-color: #999999;
+  padding: 0px 10px 10px 0px;
 }
 
-.grid-skills {
-  background-color: #654321;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+.grid-container-skills {
+  background-color: #aaaaaa;
+  border: 2px solid rgba(0, 0, 0, 0.8);
   padding: 2px;
   font-size: 8px;
   text-align: center;
+}
+
+.skill-list {
+  background-color: #cccccc;
+  padding: 5px;
+  font-size: 16px;
+  text-align: left;
+  font-weight: lighter;
+  font-family: 'Courier New', Helvetica, sans-serif;
+
 }
 
 .grid-container-timeline {
   display: grid;
   grid-template-columns: 100%;
   background-color: #2196F3;
-  padding: 10px;
+  padding: 0px;
 }
 
 .grid-container-title {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 55% 45%;
   background-color: #0000F3;
-  padding: 10px;
+  padding: 5px;
 }
 
 .grid-title-left {
   background-color: rgba(255, 255, 0, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   font-size: 16px;
   text-align: left;
   font-family: Georgia, Helvetica, sans-serif;
@@ -44,15 +59,17 @@
 .grid-title-right {
   background-color: rgba(0, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  text-align: right;
+  font-family: Georgia, Helvetica, sans-serif;
+
 }
 
 .grid-content {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  padding: 10px 10px 10px 0px;
   font-size: 10px;
   text-align: left;
 }
@@ -60,12 +77,37 @@
 </head>
 <body>
 
-<h1>display: grid</h1>
 
-<p>Use display: grid; to make a block-level grid container:</p>
+
 <div class="grid-container-page">
-  <div class="grid-container-skills"> </div>
+
+  <div class="grid-container-skills"> 
+  <h3>Technical Skills</h3>
+  <div class="skill-list">
+  <p>Ruby</p>
+  <p>Rails</p>
+  <p>ActiveRecord</p>
+  <p>SQL (PostgreSQL)</p>
+  <p>OOP</p>
+  <p>Test Driven Development</p>
+  <p>RSpec</p>
+  <p>Capybara</p>
+  <p>Webmock</p>
+  <p>VCR</p>
+  <p>Git</p>
+  <p>GitHub</p>
+  <p>Heroku</p>
+  <p>Render</p>
+  <p>Bootstrap</p>
+  <p>CSS</p>
+  <p>HTML</p>
+  <p>Python</p>
+  </div>
+  </div>
   <div class="grid-container-timeline">
+  <div class="header">
+    <h1>Experience</h1>
+  </div>
     <div class="grid-container-title">
       <div class="grid-title-left">
       <p>Technical Service Engineer</p>
@@ -73,34 +115,97 @@
       <i>Haldor Topsoe, Inc.</i></p>
       </div>
       <div class="grid-title-right">
-      period1</div>
+      <p>Houston, TX</p>
+      <p>2019-2023</p>
+      </div>
     </div>
-    <div class="grid-content">Tasks 1</div>
-    <div class="grid-content">Tasks 2</div>
-    <div class="grid-content">Tasks 3</div>
+      <div class="grid-content">
+        <ul>
+          <li>Traveled to customer sites to manage proper installation of Topsoe products during plant turnarounds. Directed start-ups of processes containing those products. This required direction of and communication with all levels of plant personnel and plant contractors.</li>
+          <li>Conducted process diagnostic and performance testing on-site. Generated diagnostic and performance evaluation reports based on data collected</li>
+          <li>Performed calculations and generated technical quotations with optimal performance based on customer specifications.</li>
+        </ul>
+      </div>
     <div class="grid-container-title">
       <div class="grid-title-left">
-      <p>Research and Technology Engineer</p>
+      <p>Research and Technology Chemical Engineer</p>
       <p style="font-weight:normal; font-family: Georgia, Helvetica, sans-serif; font-size:15px">
       <i>Albemarle Corporation</i></p>
       </div>
-      <div class="grid-title-right">period2</div>
+      <div class="grid-title-right">
+      <p>Pasadena, TX</p>
+      <p>2015-2019</p>
+      </div>
     </div>
-    <div class="grid-content">Tasks 1</div>
-    <div class="grid-content">Tasks 2</div>
-    <div class="grid-content">Tasks 3</div>
+    <div class="grid-content">
+      <ul>
+        <li>Developed new process technology and set scope of work for $3MM multi-phase project for better control and reliability of problematic alumina process. Organized and led multi-function team to complete project. Estimated saving are $2.7MM per year</li>
+        <li>Developed and implemented process improvements that increased production rates, improved consistent quality, limited downtime due to maintenance, and decreased costs of operation for alumina process. This effort resulted in a record production month with a 15% increase over previous record and improved quality with no capital spent. Awarded first author of Albemarle Technical Award for this effort</li>
+        <li>Developed and ran lab scale experiments to provide data necessary for process changes (see above). Based on results,  industrial scale trial were run in order to permanently implement process changes</li>
+        <li>Organized all work and produced all emissions calculations for environmental air permit renewal of FCC catalyst plant</li>
+        <li>Acted as main plant troubleshooting support to the operations team for alumina catalyst</li>
+      </ul>
+    </div>
     <div class="grid-container-title">
-      <div class="grid-title-left">Company3</div>
-      <div class="grid-title-right">period3</div>
+      <div class="grid-title-left">
+      <p>Masters Swim Team Coach</p>
+      <p style="font-weight:normal; font-family: Georgia, Helvetica, sans-serif; font-size:15px">
+      <i>South Shore Fitness</i></p>
+      </div>
+      <div class="grid-title-right">
+      <p>League City, TX</p>
+      <p>2016-2017</p>
+      </div>
     </div>
-    <div class="grid-content">Tasks 1</div>
-    <div class="grid-content">Tasks 2</div>
-    <div class="grid-content">Tasks 3</div>
-
+    <div class="grid-content">
+      <ul>
+        <li>Used experience as top 150 collegiate triathlete and Louisiana State Champion swimmer to develop individualized training plans for competitors </li>
+      </ul>
+    </div>
+    <div class="grid-container-title">
+      <div class="grid-title-left">
+      <p>Chemical Engineering Intern</p>
+      <p style="font-weight:normal; font-family: Georgia, Helvetica, sans-serif; font-size:15px">
+      <i>Albemarle Corporation</i></p>
+      </div>
+      <div class="grid-title-right">
+      <p>Baton Rouge, LA; Tyrone, PA; Pasadena, TX</p>
+      <p>Summer 2012, 2013, 2014</p>
+      </div>
+    </div>
+    <div class="grid-content">
+      <ul>
+        <li>Performed an audit on the operation of a boiler and boiler system. Evaluated options for improved operation and recommended changes. Developed necessary hand-off documentation for plans to be implemented after departure</li>
+        <li>Learned how to gather, organize, and communicate information, as well as operate safely in a chemical plant setting</li>
+      </ul>
+    </div>
+        <div class="grid-container-title">
+      <div class="grid-title-left">
+      <p>Program and Music Director – KLPI Radio Station </p>
+      <p style="font-weight:normal; font-family: Georgia, Helvetica, sans-serif; font-size:15px">
+      <i>Louisiana Tech University</i></p>
+      </div>
+      <div class="grid-title-right">
+      <p>Ruston, LA</p>
+      <p>2013-2015</p>
+      </div>
+    </div>
+    <div class="grid-content">
+      <ul>
+        <li>Trained all employees based on responsibilities and airtime, and ensured that broadcasting follows FCC regulations</li>
+        <li>Scheduled all broadcasting, including but not limited to music, promos, advertisements, specialty shows</li>
+      </ul>
+    </div>
+    <div class="header">
+      <h1>Education</h1>
+    </div>
 
 
   </div>
 </div>
+
+
+
 </body>
 </html>
 

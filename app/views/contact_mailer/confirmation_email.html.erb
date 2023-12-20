@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+  <div style="margin-left:12px">
+    <p>Dear <%= "#{@name} #{@last_name}," %></p>
+    <h3>This is a confirmation of your email to Michael Kuhlmeier</h3>
+    <p>Your message was:</p>
+    <p style="margin-left:25px">
+      <%= @message %><br>
+    </p>
+    <br>
+    <p>Thank you for reaching out,</p>
+    <p>Michael Kuhlmeier</p>
+
+    <p style="font-size:12px"><%= "<This is an automated message - I will reach out to you shortly>" %></p>
+
+</div>
+  </body>
+</html>

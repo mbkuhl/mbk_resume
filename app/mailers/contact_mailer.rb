@@ -9,4 +9,13 @@ class ContactMailer < ApplicationMailer
   
     mail(from: @email, subject: "Contact from #{@name} #{@last_name}")
   end
+
+  def confirmation_email
+    @name = params[:name]
+    @last_name = params[:last_name]
+    @email = params[:email]
+    @message = params[:message]
+  
+    mail(from: 'kuhlmb@gmail.com', to: @email, subject: "Confirmation of email to Michael Kuhlmeier")
+  end
 end

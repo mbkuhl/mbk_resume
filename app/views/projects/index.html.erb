@@ -10,9 +10,16 @@
   text-align: center;
 }
 
-.grid-container-timeline {
+.grid-container-page {
   display: grid;
   grid-template-columns: 100%;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container-project-spec {
+  display: grid;
+  grid-template-columns: 80% 20%;
   background-color: #2196F3;
   padding: 10px;
 }
@@ -27,32 +34,32 @@
 .grid-title-left {
   background-color: rgba(255, 255, 0, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  padding: 10px 10px 10px 20px;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .grid-link {
   background-color: rgba(0, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  text-align: left;
 }
 
 .grid-tech-stack {
   background-color: rgba(0, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  text-align: right;
 }
 
 .grid-project-description {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
-  font-size: 10px;
+  font-size: 12px;
   text-align: left;
 }
 
@@ -60,36 +67,88 @@
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
-  font-size: 10px;
+  font-size: 12px;
   text-align: left;
 }
 </style>
 </head>
 <body>
 
-<h1>display: grid</h1>
-
-<p>Use display: grid; to make a block-level grid container:</p>
-<div class="grid-container-timeline">
+<div class="grid-container-page">
   <div class="grid-container-title">
-    <div class="grid-title-left">Project 1</div>
-    <div class="grid-link">Link</div>
-    <div class="grid-tech-stack">Tech</div>
+    <div class="grid-title-left">Viewing Party (pair) </div>
+    <div class="grid-link"><%= link_to "GitHub", "http://github.com/mbkuhl/viewing_party_lite_7" %></div>
+    <div class="grid-tech-stack">Ruby | Rails | RSpec | Bcrypt | Capybara | VCR | Webmock</div>
   </div>
-  <div class="grid-project-description">Desc</div>
-  <div class="grid-project-tasks">Tasks 2</div>
+  <div class="grid-container-project-spec">
+    <div class="grid-project-description">
+      What it does: Application that allows users to discover movies and create viewing parties to watch with friends.
+    </div>
+    <div class="grid-project-description">
+      Timetable: 6 days
+    </div>
+  </div>
+  <div class="grid-project-tasks">
+    <ul>
+      <li>Implemented secure login system with complete with sessions, admin and default user permissions</li>
+      <li>Refactored controllers to implement facades, POROs and services to obey SRP.</li>
+      <li>Implemented CRUD functionality and authentication tokens in order to secure internal data</li>
+    </ul></div>
   <div class="grid-container-title">
-    <div class="grid-title-left">Project 1</div>
-    <div class="grid-link">Link</div>
-    <div class="grid-tech-stack">Tech</div>  </div>
-  <div class="grid-project-description">Desc</div>
-  <div class="grid-project-tasks">Tasks 2</div>
+    <div class="grid-title-left">Futbol (group)</div>
+    <div class="grid-link"><%= link_to "GitHub", "http://github.com/mbkuhl/futbol" %></div>
+    <div class="grid-tech-stack">Ruby | Benchmark | RSpec</div>
+  </div>
+  <div class="grid-container-project-spec">
+    <div class="grid-project-description">
+      What it does: This program takes large sets of unorganized data from CSV files, and efficiently calculates various statistics
+    </div>
+    <div class="grid-project-description">
+      Timetable: 6 days
+    </div>
+  </div>
+  <div class="grid-project-tasks">
+    <ul>
+      <li><%=  "Developed  data pipeline that would reduce runtime from 12+ hrs to 45 secs and finally to <1 sec." %></li>
+      <li>Wrote code to build representative fixture data for efficient and accurate testing</li>
+    </ul></div>
   <div class="grid-container-title">
-    <div class="grid-title-left">Project 1</div>
-    <div class="grid-link">Link</div>
+    <div class="grid-title-left">Weather, Together (group)</div>
+    <div class="grid-link"><%= link_to "Deployment", "/projects" %> | <%= link_to "GitHub", "/projects" %></div>
     <div class="grid-tech-stack">Tech</div></div>
-  <div class="grid-project-description">Desc</div>
-  <div class="grid-project-tasks">Tasks 2</div>
+  <div class="grid-container-project-spec">
+    <div class="grid-project-description">
+      What it is: A guessing game for weather - pick a location you think will have the best match to a set of randomly generated weather statistics
+    </div>
+    <div class="grid-project-description">
+      Timetable: 10 days
+    </div>
+  </div>
+  <div class="grid-project-tasks">
+    <ul>
+      <li>Developed overall scope and design of app and delegated tasks to teammates</li>
+      <li>Developed system to reduce total amount of API calls in order to remain free</li>
+      <li>Implemented email notification system for guess deadlines</li>
+    </ul></div>
+</div>
+  <div class="grid-container-title">
+    <div class="grid-title-left">Market Money (solo)</div>
+    <div class="grid-link"><%= link_to "Deployment", "/projects" %> | <%= link_to "GitHub", "/projects" %></div>
+    <div class="grid-tech-stack">Tech</div></div>
+  <div class="grid-container-project-spec">
+    <div class="grid-project-description">
+      What it is: A guessing game for weather - pick a location you think will have the best match to a set of randomly generated weather statistics
+    </div>
+    <div class="grid-project-description">
+      Timetable: 10 days
+    </div>
+  </div>
+  <div class="grid-project-tasks">
+    <ul>
+      <li>Implemented separate back end and front end applications in order to learn pros and cons of Service-Oriented-Architecture</li>
+      <li>Implemented email notification system for guess deadlines</li>
+    </ul>
+  </div>
 </div>
 
 

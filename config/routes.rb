@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get "/projects", to: "projects#index"
   get "/about_me", to: "about_me#show"
   get "/contact", to: "contact#new"
+  post "/contact", to: "contact#create"
 end

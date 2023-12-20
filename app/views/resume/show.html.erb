@@ -3,6 +3,8 @@
 <head>
 <style>
 .header {
+  display: grid;
+  grid-template-columns: 50% 50%;
   background-color: #abcdef;
   padding: 10px 20px 20px 40px ;
 }
@@ -46,6 +48,13 @@
   padding: 5px;
 }
 
+.grid-container-education {
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  background-color: #0000F3;
+  padding: 5px;
+}
+
 .grid-title-left {
   background-color: rgba(255, 255, 0, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
@@ -63,7 +72,25 @@
   font-size: 16px;
   text-align: right;
   font-family: Georgia, Helvetica, sans-serif;
+}
 
+.grid-title-left-education {
+  background-color: rgba(255, 255, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 100px 10px 10px 20px;
+  font-size: 16px;
+  text-align: left;
+  font-family: Georgia, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.grid-title-right-education {
+  background-color: rgba(0, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 100px 10px 10px 10px;
+  font-size: 16px;
+  text-align: right;
+  font-family: Georgia, Helvetica, sans-serif;
 }
 
 .grid-content {
@@ -72,6 +99,10 @@
   padding: 10px 10px 10px 0px;
   font-size: 10px;
   text-align: left;
+}
+
+.education-pic {
+  margin: 0% 15%
 }
 </style>
 </head>
@@ -106,8 +137,10 @@
   </div>
   <div class="grid-container-timeline">
   <div class="header">
-    <h1>Experience</h1>
+    <h1><%= link_to "Experience", "/resume" %></h1>
+    <h1 style="text-align:right"><%= link_to "Education", "/resume?section=education" %></h1>
   </div>
+  <% unless @education %>
     <div class="grid-container-title">
       <div class="grid-title-left">
       <p>Technical Service Engineer</p>
@@ -196,11 +229,40 @@
         <li>Scheduled all broadcasting, including but not limited to music, promos, advertisements, specialty shows</li>
       </ul>
     </div>
-    <div class="header">
-      <h1>Education</h1>
-    </div>
-
-
+    <% end %>
+    <% if @education %>
+      <div class="header">
+        <h1>Education</h1>
+      </div>
+      <div class="grid-container-education">
+        <div class="education-pic">
+          <img src="<%= asset_path('turing.png') %>" alt="Turing Logo" height=300px style="padding:0px 5px"></div>
+        <div class="grid-title-left-education">
+        <p>Turing School of Software and Design</p>
+        <p style="font-weight:normal; font-family: Arial, Helvetica, sans-serif; font-size:15px">
+        <i>Accredited Certificate in Backend Software Engineering</i></p>
+        </div>
+        <div class="grid-title-right-education">
+        <p>Denver, CO</p>
+        <p>Sep 2023 - Mar 2024</p>
+        </div>
+      </div>
+      <div class="grid-container-education">
+      <div class="education-pic">
+        <img src="<%= asset_path('LATech.jpeg') %>" alt="Louisiana Tech Logo" height=300px  style="padding:0px 5px;border-radius:50%">
+      </div>
+        <div class="grid-title-left-education">Louisiana Tech University</p>
+        <p style="font-weight:normal; font-family: Arial, Helvetica, sans-serif; font-size:15px">
+        <i>Bachelor of Science in Chemical Engineering</i></p>
+        <p style="font-weight:normal; font-family: Arial, Helvetica, sans-serif; font-size:15px">
+        <i>Minor in Chemistry</i></p>
+        </div>
+        <div class="grid-title-right-education">
+        <p>Ruston, LA</p>
+        <p>Sep 2011 - May 2015</p>
+        </div>
+      </div>
+      <% end %>
   </div>
 </div>
 

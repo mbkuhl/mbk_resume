@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MbkResume</title>
+    <title>Michael Kuhlmeier</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,11 +10,11 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body style="color:#444444">
   <br>
   <div class="nav-container container-fluid">
   <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-    <h3 class="navbar-text"><%= link_to "Michael Kuhlmeier", "/" %></h3>
+    <h3 class="navbar-text" style="font-size:1.7vw"><%= link_to "Michael Kuhlmeier", "/" %></h3>
     <ul class="nav navbar-nav pull-right">
       <li><%= link_to 'Resume', "/resume", class: 'link_1', style: 'pull-right' %></li>
       <li><%= link_to 'Projects', "/projects", class: 'link_1', style: 'pull-right' %></li>

@@ -6,7 +6,7 @@ class UserPreview < ActionMailer::Preview
     @email = "test@gmail.com"
     @message = "Does this work?"
 
-    ContactMailer.with(name: @name, last_name: @last_name, email: @email, message: @message).contact_email.deliver_now
+    ContactMailer.with(name: @name, last_name: @last_name, email: @email, message: @message).contact_email
 
   end
   def confirmation_email
@@ -15,7 +15,7 @@ class UserPreview < ActionMailer::Preview
     @email = "test@gmail.com"
     @message = "Does this work?"
 
-    ContactMailer.with(name: @name, last_name: @last_name, email: @email, message: @message).confirmation_email.deliver_now
+    ContactMailer.with(name: @name, last_name: @last_name, email: @email, message: @message).confirmation_email
 
   end
 end

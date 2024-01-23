@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "welcome#index"
-  get "/resume", to: "resume#show"
+  get "/experience", to: "resume#show"
   get "/projects", to: "projects#index"
   get "/about_me", to: "about_me#show"
-  get "/contact", to: "contact#new"
+  get "/contact", to: "contact#new_new"
   post "/contact", to: "contact#create"
 end

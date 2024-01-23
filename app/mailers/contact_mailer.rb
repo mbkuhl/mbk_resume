@@ -3,11 +3,10 @@ class ContactMailer < ApplicationMailer
 
   def contact_email
     @name = params[:name]
-    @last_name = params[:last_name]
     @email = params[:email]
     @message = params[:message]
   
-    mail(from: @email, subject: "Contact from #{@name} #{@last_name}")
+    mail(from: @email, subject: "Contact from #{@name}")
   end
 
   def confirmation_email

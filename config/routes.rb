@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "/experience", to: "resume#show"
   get "/projects", to: "projects#index"
-  get "/about_me", to: "about_me#show"
+  get "/education", to: "education#show"
   get "/contact", to: "contact#new_new"
   post "/contact", to: "contact#create"
 end

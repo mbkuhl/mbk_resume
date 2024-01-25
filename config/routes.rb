@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get "/experience", to: "resume#show"
   get "/projects", to: "projects#index"
   get "/education", to: "education#show"
-  get "/contact", to: "contact#new_new"
+  get "/contact", to: "contact#new"
   post "/contact", to: "contact#create"
 end

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.grid-container-form {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  background-color: #ffffff;
+  gap: 2%;
+}
+</style>
+</head>
+<body>
+<%= form_with scope: :contact_form, url: "/contact", method: :post, local: true, class: "container" do |form| %>
+  <h3>Send me an email:</h3>
+  <br>
+  <div class="grid-container-form">
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :last_name %>
+      <%= form.text_field :last_name, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control" %>
+  </div>
+  <%= form.submit "Submit", class: "btn btn-primary" %>
+<% end %>
+<br>
+<hr>
+<%= form_with scope: :contact_form, url: "/contact", method: :post, local: true, class: "container" do |form| %>
+  <h3>Or schedule a zoom meeting:</h3>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/kuhlmmb/30min" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+
+<% end %>
+</body>

@@ -1,6 +1,6 @@
 class ContactController < ApplicationController
 
-  def new_new
+  def new
 
   end
 

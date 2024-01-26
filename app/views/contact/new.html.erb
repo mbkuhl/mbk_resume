@@ -1365,7 +1365,7 @@
                 overflow-x: hidden
             }
 
-            .container {
+            .container1 {
                 width: 90%;
                 max-width: 1200px;
                 margin: 0 auto
@@ -1384,7 +1384,7 @@
                 flex: 0 0 auto
             }
 
-            .header .container,.footer .container {
+            .header .container1,.footer .container1 {
                 display: -webkit-box;
                 display: -webkit-flex;
                 display: -moz-flex;
@@ -1405,7 +1405,7 @@
             }
 
             @media screen and (min-width: 40em) {
-                .header .container,.footer .container {
+                .header .container1,.footer .container1 {
                     -webkit-box-align:center;
                     -ms-flex-align: center;
                     -webkit-align-items: center;
@@ -1431,7 +1431,7 @@
                 background-position: center
             }
 
-            .feature .container {
+            .feature .container1 {
                 min-height: 35vh;
                 max-width: 60%;
                 -webkit-box-direction: normal;
@@ -1495,7 +1495,7 @@
                 color: #fff
             }
 
-            .footer .container {
+            .footer .container1 {
                 -webkit-flex-wrap: wrap;
                 -moz-flex-wrap: wrap;
                 -ms-flex-wrap: wrap;
@@ -1941,7 +1941,7 @@
             </symbol>
         </svg>
         <header class="header">
-            <div class="container">
+            <div class="container1">
                 <a class="logo" href="/">
                     <img src="<%= asset_path('logo.svg') %>" alt="Michael Kuhlmeier logo"/>
                 </a>
@@ -2003,10 +2003,26 @@
                 </script>
             </div>
         </header>
-        <main class="main  container">
+        <main class="main  container1">
             <article class="article  article--page  content  typeset">
                 <h3>Send Me an Email:</h3>
-                <form class="form  form--contact" method="post" name="Contact" action="/contact/">
+                <%= form_with scope: :contact_form, url: "/contact", method: :post, local: true, class: "container1" do |form| %>
+                    <div class="form-group">
+                    <%= form.label :name %>
+                    <%= form.text_field :name, class: "form-control" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= form.label :email %>
+                    <%= form.email_field :email, class: "form-control" %>
+                </div>
+                <div class="form-group">
+                    <%= form.label :message %>
+                    <%= form.text_area :message, class: "form-control" %>
+                </div>
+                <%= form.submit "Submit", class: "btn btn-primary" %>
+                <% end %>
+                <%# <form class="form  form--contact" method="post" name="Contact" action="/contact/">
                     <fieldset class="fieldset  form__fieldset">
                         <legend class="legend form__legend">Contact</legend>
                         <label class="label" for="name--contact">
@@ -2031,7 +2047,7 @@
                         <input type="hidden" name="_subject" value="Michael Kuhlmeier submission from Contact"/>
                         <input type="hidden" name="_next" value="/thanks/"/>
                     </fieldset>
-                </form>
+                </form> %>
                 <noscript>Please enable JavaScript to use the form.</noscript>
               <h3>Or schedule a zoom meeting:</h3>
               <!-- Calendly inline widget begin -->
@@ -2041,7 +2057,7 @@
             </article>
         </main>
         <footer class="footer">
-            <div class="container">
+            <div class="container1">
                 <div class="copyright  typeset">
                     <small class="small">&copy;Michael Kuhlmeier 2024</small>
                 </div>

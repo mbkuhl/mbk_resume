@@ -43,13 +43,18 @@
                 "@context": "https://schema.org"
             }</script>
         <!-- End Jekyll SEO tag -->
-        <title>Posts - Michael Kuhlmeier</title>
+        <title>Projects - Michael Kuhlmeier</title>
         <meta property="og:title" content="Posts">
         <meta name="description" content="My thoughts and ideas">
         <meta property="og:description" content="My thoughts and ideas">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link rel="manifest" href="/manifest.json">
         <meta name="theme-color" content="#242e2b"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
         <style>
             /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
             html {
@@ -1369,7 +1374,7 @@
                 overflow-x: hidden
             }
 
-            .container {
+            .container1 {
                 width: 90%;
                 max-width: 1200px;
                 margin: 0 auto
@@ -1388,7 +1393,7 @@
                 flex: 0 0 auto
             }
 
-            .header .container,.footer .container {
+            .header .container1,.footer .container1 {
                 display: -webkit-box;
                 display: -webkit-flex;
                 display: -moz-flex;
@@ -1409,7 +1414,7 @@
             }
 
             @media screen and (min-width: 40em) {
-                .header .container,.footer .container {
+                .header .container1,.footer .container1 {
                     -webkit-box-align:center;
                     -ms-flex-align: center;
                     -webkit-align-items: center;
@@ -1435,7 +1440,7 @@
                 background-position: center
             }
 
-            .feature .container {
+            .feature .container1 {
                 min-height: 35vh;
                 max-width: 60%;
                 -webkit-box-direction: normal;
@@ -1499,7 +1504,7 @@
                 color: #fff
             }
 
-            .footer .container {
+            .footer .container1 {
                 -webkit-flex-wrap: wrap;
                 -moz-flex-wrap: wrap;
                 -ms-flex-wrap: wrap;
@@ -1913,6 +1918,7 @@
                 white-space: pre;
                 overflow-x: scroll
             }
+
             .grid-skills {
               /* background-color: #654321; */
               border: 1px solid rgba(0, 0, 0, 0.8);
@@ -1937,15 +1943,15 @@
 
             .grid-container-title {
               display: grid;
-              grid-template-columns: 20% 20% 60%;
+              grid-template-columns: 40% 60%;
               /* background-color: #0000F3; */
-              padding: 10px;
+              padding: 0px;
             }
 
             .grid-title-left {
               /* background-color: rgba(255, 255, 0, 0.8); */
               /* border: 1px solid rgba(0, 0, 0, 0.8); */
-              padding: 10px 10px 10px 20px;
+              padding: 10px 10px 5px 20px;
               font-size: 20px;
               text-align: left;
             }
@@ -1953,32 +1959,32 @@
             .grid-link {
               /* background-color: rgba(0, 255, 255, 0.8); */
               /* border: 1px solid rgba(0, 0, 0, 0.8); */
-              padding: 10px;
+              padding: 10px 10px 5px 10px;
               font-size: 20px;
-              text-align: left;
+              text-align: right;
             }
 
             .grid-tech-stack {
               /* background-color: rgba(0, 255, 255, 0.8); */
               /* border: 1px solid rgba(0, 0, 0, 0.8); */
-              padding: 10px;
-              font-size: 20px;
-              text-align: right;
+              padding: 5px 5px 5px 30px;
+              font-size: 14px;
+              border-bottom: 1px solid;
             }
 
             .grid-project-description {
               /* background-color: rgba(255, 255, 255, 0.8); */
               /* border: 1px solid rgba(0, 0, 0, 0.8); */
-              padding: 20px;
-              font-size: 12px;
+              padding: 5px 5px 5px 10px;
+              font-size: 14px;
               text-align: left;
             }
 
             .grid-project-tasks {
               /* background-color: rgba(255, 255, 255, 0.8); */
               /* border: 1px solid rgba(0, 0, 0, 0.8); */
-              padding: 20px;
-              font-size: 12px;
+              padding: 5px 5px 5px 30px;
+              font-size: 14px;
               text-align: left;
             }
         </style>
@@ -2079,7 +2085,7 @@
             </symbol>
         </svg>
         <header class="header">
-            <div class="container">
+            <div class="container1">
                 <a class="logo" href="/">
                     <img src="<%= asset_path('logo.svg') %>" alt="Michael Kuhlmeier logo"/>
                 </a>
@@ -2141,7 +2147,7 @@
                 </script>
             </div>
             <div class="feature" style="background-image: url(<%= asset_path('portfolio.jpeg') %>)">
-              <div class="container  typeset">
+              <div class="container1  typeset">
                   <h2 id="michael-kuhlmeier">Michael Kuhlmeier</h2>
                   <p>Back End Software Engineer | Ruby on Rails</p>
               </div>
@@ -2149,82 +2155,164 @@
         </header>
         <main class="main  container">
             <div class="content">
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                              <div class="panel-heading">
+                  <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                    <div class="grid-container-title">
+                      <div class="grid-title-left">Weather, Together (group)</div>
+                      <div class="grid-link"><%= link_to "Deployment", "https://weather-together.onrender.com/" %> | <%= link_to "GitHub", "https://github.com/Weather-Together" %></div>
+                    </div>
+                      <div class="grid-tech-stack">Ruby | Rails | Bootstrap | RSpec | Postgres | OAuth | ActiveMailer | Render</div>
+                  </a>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div class="grid-container-project-spec">
+                      <div class="grid-project-description">
+                        A guessing game for weather - pick a location you think will have the best match to a set of randomly generated weather statistics
+                      </div>
+                      <div class="grid-project-description">
+                        Timetable: 10 days
+                      </div>
+                    </div>
+                    <div class="grid-project-tasks">
+                      <ul>
+                        <li>Developed overall scope and design of app and delegated tasks to teammates</li>
+                        <li>Developed full game logic and daily cycle triggered by cron jobs</li>
+                        <li>Implemented email verification system</li>
+                        <li>Implemented API services, along with all logic such as facades to communicate with database and controllers</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    <div class="grid-container-title">
+                      <div class="grid-title-left">Viewing Party (pair) </div>
+                      <div class="grid-link"><%= link_to "GitHub", "http://github.com/mbkuhl/viewing_party_lite_7" %></div>
+                    </div>
+                    <div class="grid-tech-stack">Ruby | Rails | RSpec | Bcrypt | Capybara | VCR | Webmock</div>
+                  </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class="grid-container-project-spec">
+                      <div class="grid-project-description">
+                        Application that allows users to discover movies and create viewing parties to watch with friends.
+                      </div>
+                      <div class="grid-project-description">
+                        Timetable: 6 days
+                      </div>
+                    </div>
+                    <div class="grid-project-tasks">
+                      <ul>
+                        <li>Implemented secure login system with complete with sessions, admin and default user permissions</li>
+                        <li>Refactored controllers to implement facades, POROs and services to obey SRP.</li>
+                        <li>Implemented CRUD functionality and authentication tokens in order to secure internal data</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    <div class="grid-container-title">
+                      <div class="grid-title-left">Futbol (group)</div>
+                      <div class="grid-link"><%= link_to "GitHub", "http://github.com/mbkuhl/futbol" %></div>
+                    </div>
+                    <div class="grid-tech-stack">Ruby | Benchmark | RSpec</div>
+                  </a>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class="grid-container-project-spec">
+                      <div class="grid-project-description">
+                        This program takes large sets of unorganized data from CSV files, and efficiently calculates various statistics
+                      </div>
+                      <div class="grid-project-description">
+                        Timetable: 6 days
+                      </div>
+                    </div>
+                    <div class="grid-project-tasks">
+                      <ul>
+                        <li><%=  "Developed  data pipeline that would reduce runtime from 12+ hrs to 45 secs and finally to <1 sec." %></li>
+                        <li>Wrote code to build representative fixture data for efficient and accurate testing</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                    <div class="grid-container-title">
+                    <div class="grid-title-left">Market Money (solo)</div>
+                    <div class="grid-link"><%= link_to "Repo FE", "https://github.com/mbkuhl/market_money_fe" %> | <%= link_to "Repo BE", "https://github.com/mbkuhl/market_money" %></div>
+                    </div>
+                    <div class="grid-tech-stack">Ruby | Rails | Bootstrap | RSpec | Postgres </div>
+                  </a>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class="grid-container-project-spec">
+                      <div class="grid-project-description">
+                        A database of markets and vendors that employs search function by location, etc.  
+                      </div>
+                      <div class="grid-project-description">
+                        Timetable: 6 days
+                      </div>
+                    </div>
+                    <div class="grid-project-tasks">
+                      <ul>
+                        <li>Implemented all CRUD functionality through endpoints</li>
+                        <li>Implemented FE to interact with BE endpoints and display information</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                    <div class="grid-container-title">
+                    <div class="grid-title-left">MBK Resume (solo)</div>
+                    <div class="grid-link"><%= link_to "Deployment", "/" %> | <%= link_to "GitHub", "https://github.com/mbkuhl/mbk_resume" %></div>
+                    </div>
+                    <div class="grid-tech-stack"> Ruby | Rails | Bootstrap | ActiveMailer | Heroku</div>
+                  </a>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class="grid-container-project-spec">
+                      <div class="grid-project-description">
+                        A website to host my resume with the intention of learning some design principles
+                      </div>
+                      <div class="grid-project-description">
+                        Timetable: 10 days
+                      </div>
+                    </div>
+                    <div class="grid-project-tasks">
+                      <ul>
+                        <li>Piieced together several jekyll templates, added bootstrap elements and refined layout</li>
+                        <li>Implemented all contact functionality</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
             <div class="grid-container-page">
-  <div class="grid-container-title">
-    <div class="grid-title-left">Viewing Party (pair) </div>
-    <div class="grid-link"><%= link_to "GitHub", "http://github.com/mbkuhl/viewing_party_lite_7" %></div>
-    <div class="grid-tech-stack">Ruby | Rails | RSpec | Bcrypt | Capybara | VCR | Webmock</div>
-  </div>
-  <div class="grid-container-project-spec">
-    <div class="grid-project-description">
-      What it does: Application that allows users to discover movies and create viewing parties to watch with friends.
-    </div>
-    <div class="grid-project-description">
-      Timetable: 6 days
-    </div>
-  </div>
-  <div class="grid-project-tasks">
-    <ul>
-      <li>Implemented secure login system with complete with sessions, admin and default user permissions</li>
-      <li>Refactored controllers to implement facades, POROs and services to obey SRP.</li>
-      <li>Implemented CRUD functionality and authentication tokens in order to secure internal data</li>
-    </ul></div>
-  <div class="grid-container-title">
-    <div class="grid-title-left">Futbol (group)</div>
-    <div class="grid-link"><%= link_to "GitHub", "http://github.com/mbkuhl/futbol" %></div>
-    <div class="grid-tech-stack">Ruby | Benchmark | RSpec</div>
-  </div>
-  <div class="grid-container-project-spec">
-    <div class="grid-project-description">
-      What it does: This program takes large sets of unorganized data from CSV files, and efficiently calculates various statistics
-    </div>
-    <div class="grid-project-description">
-      Timetable: 6 days
-    </div>
-  </div>
-  <div class="grid-project-tasks">
-    <ul>
-      <li><%=  "Developed  data pipeline that would reduce runtime from 12+ hrs to 45 secs and finally to <1 sec." %></li>
-      <li>Wrote code to build representative fixture data for efficient and accurate testing</li>
-    </ul></div>
-  <div class="grid-container-title">
-    <div class="grid-title-left">Weather, Together (group)</div>
-    <div class="grid-link"><%= link_to "Deployment", "/projects" %> | <%= link_to "GitHub", "/projects" %></div>
-    <div class="grid-tech-stack">Tech</div></div>
-  <div class="grid-container-project-spec">
-    <div class="grid-project-description">
-      What it is: A guessing game for weather - pick a location you think will have the best match to a set of randomly generated weather statistics
-    </div>
-    <div class="grid-project-description">
-      Timetable: 10 days
-    </div>
-  </div>
-  <div class="grid-project-tasks">
-    <ul>
-      <li>Developed overall scope and design of app and delegated tasks to teammates</li>
-      <li>Developed system to reduce total amount of API calls in order to remain free</li>
-      <li>Implemented email notification system for guess deadlines</li>
-    </ul></div>
-</div>
-  <div class="grid-container-title">
-    <div class="grid-title-left">Market Money (solo)</div>
-    <div class="grid-link"><%= link_to "Deployment", "/projects" %> | <%= link_to "GitHub", "/projects" %></div>
-    <div class="grid-tech-stack">Tech</div></div>
-  <div class="grid-container-project-spec">
-    <div class="grid-project-description">
-      What it is: A guessing game for weather - pick a location you think will have the best match to a set of randomly generated weather statistics
-    </div>
-    <div class="grid-project-description">
-      Timetable: 10 days
-    </div>
-  </div>
-  <div class="grid-project-tasks">
-    <ul>
-      <li>Implemented separate back end and front end applications in order to learn pros and cons of Service-Oriented-Architecture</li>
-      <li>Implemented email notification system for guess deadlines</li>
-    </ul>
-  </div>
-</div>
+
+
+
+
+
+            </div>
 
                 <%# <article class="article  article--page  typeset">
                     <h1>Posts</h1>

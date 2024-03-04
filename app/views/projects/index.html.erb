@@ -2167,9 +2167,9 @@
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
                     <div class="grid-container-title">
                       <div class="grid-title-left">Weather, Together (group)</div>
-                      <div class="grid-link"><%#= link_to "Deployment", "https://weather-together.onrender.com/" %> <%= link_to "GitHub", "https://github.com/Weather-Together" %></div>
+                      <div class="grid-link"><%= link_to "Deployment", "https://weather-together.github.io/weather1-fe/" %> | <%= link_to "GitHub", "https://github.com/Weather-Together" %></div>
                     </div>
-                      <div class="grid-tech-stack">Ruby | Rails | Bootstrap | RSpec | Postgres | OAuth | ActiveMailer | Render</div>
+                      <div class="grid-tech-stack">Ruby | Rails | Redis | Sidekiq | Honeycomb | React | Java | Spring Boot | RSpec | Postgres | ActiveMailer | Heroku | Digital Ocean | CircleCI</div>
                   </a>
                 </div>
                 <div id="collapse3" class="panel-collapse collapse in">
@@ -2179,7 +2179,7 @@
                         A guessing game for weather - pick a location you think will have the best match to a set of randomly generated weather statistics
                       </div>
                       <div class="grid-project-description">
-                        Timetable: 10 days
+                        Timetable: 20 days
                       </div>
                     </div>
                     <div class="grid-project-tasks">
@@ -2188,6 +2188,8 @@
                         <li>Developed full game logic and daily cycle triggered by cron jobs</li>
                         <li>Implemented email verification system</li>
                         <li>Implemented API services, along with all logic such as facades to communicate with database and controllers</li>
+                        <li>Created Java/Spring Boot microservice to serve information on guess location</li>
+                        <li>Implemented background workers and caching based on statistics gathered from Honeycomb oberservability</li>
                       </ul>
                     </div>
                   </div>
